@@ -13,17 +13,30 @@
 //$body-color: #151417;
 
 // Changing the border radius of buttons
-//$border-radius: 15px;
+$border-radius: none;
 
+// Theme colors
+$c-theme-blue: #14558f;
+$c-theme-green: #43956f;
+$c-theme-gray: #535353;
+$c-theme-yellow: #f6c51b;
+$c-red: #cd0d0d;
+$c-white: white;
+$c-black: #141414;
+$c-gray-f2f2f2: #f2f2f2;
+$c-gray-dcdcdc: #dcdcdc;
+$c-gray-a6a6a6: #a6a6a6;
+$c-gray-707070: #707070;
+$c-gray-757575: #757575;
 // Changing the theme colors
-//$primary: #202f41;
-//$secondary: #436296;
-//$success: #2bc550;
-//$info: #495dff;
-//$warning: #ef8143;
-//$danger: #ff293a;
-//$light: #dfe6ee;
-//$dark: #0f1319;
+$primary: $c-theme-green;
+$secondary: $c-theme-blue;
+$success: $c-theme-green;
+$info: #535353;
+$warning: $c-theme-yellow;
+$danger: $c-red;
+$light: $c-gray-f2f2f2;
+$dark: $c-black;
 
 
 // Adding (!) an additional theme color (ex. classes btn-cool, bg-cool)
