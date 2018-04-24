@@ -38,6 +38,10 @@ $danger: $c-red;
 $light: $c-gray-f2f2f2;
 $dark: $c-black;
 
+// Changing the fonts
+@import 'fonts';
+$font-family-sans-serif:      "Texta", "Helvetica", "Arial", "sans-serif";
+$font-family-base:            $font-family-sans-serif;
 
 // Adding (!) an additional theme color (ex. classes btn-cool, bg-cool)
 //$theme-colors: (
