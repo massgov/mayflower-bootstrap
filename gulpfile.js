@@ -4,7 +4,9 @@ var gulp  = require('gulp'),
   cleanCss = require('gulp-clean-css'),
   rename = require('gulp-rename'),
   postcss      = require('gulp-postcss'),
-  autoprefixer = require('autoprefixer');
+  autoprefixer = require('autoprefixer'),
+  browserSync = require('browser-sync').create();
+
 
 gulp.task('build-theme', function() {
   return gulp.src(['scss/*.scss'])
@@ -25,14 +27,23 @@ gulp.task('build-theme', function() {
     .pipe(cleanCss())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
+    .pipe(browserSync.stream());
 });
 
-gulp.task('watch', ['build-theme'], function() {
-  gulp.watch(['scss/*.scss'], ['build-theme']);
+// gulp.task('watch', ['build-theme'], function() {
+//   gulp.watch(['scss/*.scss'], ['build-theme']);
+// });
+
+gulp.task('serve', ['build-theme'], function() {
+
+    browserSync.init({
+        server: '.',
+        port: "6060",
+    });
+
+    gulp.watch(['scss/*.scss'], ['build-theme']);
+    gulp.watch("index.html").on('change', browserSync.reload);
 });
 
-gulp.task('default', ['build-theme'], function() {
-});
 
-
-
+gulp.task('default', ['serve']);
