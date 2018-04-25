@@ -12,8 +12,12 @@
 //$body-bg: #d3e9eb;
 //$body-color: #151417;
 
-// Changing the border radius of buttons
+// Changing the variables relating to buttons
 $border-radius: 0;
+$border-width: 3px;
+$btn-font-weight: 700;
+$btn-box-shadow: 0 0.25rem 0.5rem rgba($dark, 0.25);
+
 
 // Theme colors
 $c-theme-blue: #14558f;
