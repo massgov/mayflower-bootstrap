@@ -1,50 +1,28 @@
-# Bootstrap Theme Kit: Make your own Bootstrap 4 Themes
+# Mayflower Bootstrap Theme
 
-This is simple starter project to help you get started quickly when making a custom Bootstrap 4 theme.
+mayflower-react is a library of Mayflower design system UI components written in react. This project is to help Mayflowerize Commonwealth digital products that are currently styled with Bootstrap 4
 
-There is a full tutorial avaiable at hackerthemes.com: [How to build your own Bootstrap themes](https://hackerthemes.com/kit).
+## Development
 
-This readme is the short version of that.
-
-## What this project does
-
-This repository includes a project structure with a build script that builds a custom CSS version of Bootstrap 4, using Gulp. You can
-clone this repository, run the Gulp task and go right into modifying variables and adding styles. There's also an HTML file that contains
-a neatly organized collection of Bootstrap components that fit a 1920x1080 display, so you can instantly see the outcome.
-
-
-## Video Demonstration
-
-There is a short demonstration of this project on YouTube: [https://www.youtube.com/watch?v=Gi5ffoE3mPc](https://www.youtube.com/watch?v=Gi5ffoE3mPc)
-
-## Prerequisites
+### Prerequisites
 
 - This works on Windows, macOS and Linux.
 - Node Package Manager and Gulp are required. Make sure you can run `gulp -v` and `npm -v`.
 - You can get Node at [nodejs.org](https://nodejs.org), then install gulp using `npm install gulp-cli -g`
 
-## Getting started
+### Getting started
 
-2. Clone this repo
-3. Run `npm install`
-4. Run `gulp watch`
-4. Look at `index.html` (ideally with a [local development webserver](https://askubuntu.com/questions/377389/how-to-easily-start-a-webserver-in-any-folder))
-5. Add any Bootstrap Sass variables into `scss/_custom-variables.scss`
-6. Add any custom styles into `scss/_custom-styles.scss`. You can use Bootstrap's mixins here.
-7. Repeat steps 4 to 6 until you like what you see :-)
+1. Clone this repo
+2. Run `npm install`
+3. Run `gulp`
+4. Add any Bootstrap Sass variables into `scss/_custom-variables.scss` (Boostrap [reference](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss))
+5. Add any custom styles into `scss/_custom-styles.scss`. You can use Bootstrap's [mixins](https://github.com/twbs/bootstrap/tree/v4-dev/scss/mixins) here.
 
-## Creators
+### Deployment
 
-**Alexander Rechsteiner**
+1. Make a pull request into `master` branch
+2. Merge in changes
+3. Checkout https://massgov.github.io/mayflower-bootstrap/
 
-- <https://hackerthemes.com>
-- <https://twitter.com/arechsteiner>
-- <https://github.com/arechsteiner>
-
-**Bootstrap**
-
-- <https://github.com/twbs/bootstrap/>
-
-## Copyright and license
-
-Code and documentation copyright 2017 [HackerThemes](https://hacekrthemes.com) Code released under the [MIT License](https://opensource.org/licenses/MIT).
+## Acknowledgments
+This project was bootstrapped with [HackerThemes](https://hacekrthemes.com).
