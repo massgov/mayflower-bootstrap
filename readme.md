@@ -4,7 +4,7 @@
 
 ## Implementation
 1. Copy and add the `css/` and `assets/` folders into your project folder.
-2. Link to compiled and minified stylesheet `mayflower-bootstrap.min.css` from `css/` into you HTML `<head>`
+2. Link to compiled and minified stylesheet `mayflower-bootstrap.min.css` from `css/` in the HTML `<head>`
 e.g. `<link rel="stylesheet" href="css/mayflower-bootstrap.min.css">`
 3. Paste the following scripts before the closing body tag `</body>`
   ```
@@ -26,7 +26,7 @@ e.g. `<link rel="stylesheet" href="css/mayflower-bootstrap.min.css">`
 1. Clone this repo
 2. Run `npm install`
 3. Run `gulp` to start building and watching any scss and html changes
-4. Navigate to `localhost:6060` and see live changes
+4. Navigate to `localhost:6060` and see the live changes
 4. Add any Bootstrap Sass variables into `scss/_custom-variables.scss` (Boostrap [reference](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss))
 5. Add any custom styles into `scss/_custom-styles.scss`. You can use Bootstrap's [mixins](https://github.com/twbs/bootstrap/tree/v4-dev/scss/mixins) here.
 
