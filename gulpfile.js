@@ -7,8 +7,7 @@ var gulp  = require('gulp'),
   autoprefixer = require('autoprefixer'),
   browserSync = require('browser-sync').create();
 
-
-gulp.task('build-theme', function() {
+function buildTheme() {
   return gulp.src(['scss/*.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
@@ -28,22 +27,32 @@ gulp.task('build-theme', function() {
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('css/'))
     .pipe(browserSync.stream());
-});
+};
 
 // gulp.task('watch', ['build-theme'], function() {
 //   gulp.watch(['scss/*.scss'], ['build-theme']);
 // });
 
-gulp.task('serve', ['build-theme'], function() {
+function watch() {
+  gulp.watch(['scss/*.scss'], ['buildTheme']);
+  gulp.watch("index.html").on('change', browserSync.reload);
+}
+
+function serve() {
 
     browserSync.init({
         server: '.',
         port: "6060",
     });
+};
 
-    gulp.watch(['scss/*.scss'], ['build-theme']);
-    gulp.watch("index.html").on('change', browserSync.reload);
-});
+exports.buildTheme = buildTheme;
+exports.serve = serve;
+exports.watch = watch;
 
+var build = gulp.series(serve, gulp.parallel(buildTheme, watch));
 
-gulp.task('default', ['serve']);
+gulp.task('buildTheme', buildTheme);
+gulp.task('build', build);
+gulp.task('watch', watch);
+gulp.task('default', build);
